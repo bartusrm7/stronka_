@@ -1,0 +1,481 @@
+@use "colors" as *;
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	scroll-padding-top: 100px;
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: $page-color;
+	font-family: "Montserrat", sans-serif;
+	letter-spacing: 2px;
+}
+
+.main-photo {
+	background-image: url("/keeptrain/img/gym_small.jpg");
+	background-size: cover;
+	height: 100vh;
+	z-index: -10;
+}
+
+.section-title {
+	padding: 40px 0;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.underline {
+	margin: 10px auto 10px;
+	width: 70px;
+	height: 5px;
+	background-color: $main-color;
+}
+
+.main-photo {
+	position: relative;
+	z-index: 5;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: $white;
+	text-align: center;
+	line-height: 70px;
+	span {
+		color: $main-color;
+	}
+	.shadow-photo {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.8);
+		z-index: -5;
+	}
+}
+
+nav {
+	position: sticky;
+	top: 0;
+	// color: $white;
+	background-color: $page-color;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 30px 0;
+	z-index: 120;
+	p {
+		font-size: 25px;
+		font-weight: bold;
+	}
+	span {
+		color: $main-color;
+	}
+	.nav-link {
+		padding: 0 20px;
+		text-transform: uppercase;
+		text-decoration: none;
+		color: $black;
+		transition: color 0.3s;
+	}
+	.nav-link:hover {
+		color: $main-color;
+	}
+	.fa-dumbbell {
+		margin-left: 5px;
+		transform: rotate(-60deg);
+	}
+}
+
+.aboutus-section {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	text-align: center;
+	.aboutus-card {
+		padding: 40px;
+		transition: color 0.3s;
+		.fa-dumbbell {
+			transform: rotate(-60deg);
+		}
+		p {
+			padding-top: 10px;
+		}
+	}
+	.aboutus-card:hover {
+		color: $main-color;
+	}
+}
+
+.prices {
+	background-color: $light-grey;
+	color: $white;
+	text-align: center;
+	text-transform: uppercase;
+	.photo {
+		position: relative;
+		background-size: cover;
+		background-attachment: fixed;
+		height: max-content;
+		z-index: 3;
+	}
+	.diet {
+		background-image: url("/keeptrain/img/brooke-lark-nTZOILVZuOg-unsplashBIG.jpg");
+	}
+	.training {
+		background-image: url("/keeptrain/img/anastase-maragos-aclkvEMIfL8-unsplashBIG.jpg");
+	}
+	.prices-section {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+	}
+	.prices-card {
+		padding-bottom: 80px;
+		// margin: 20px;
+		transition: all 0.5s;
+		width: 200px;
+		div {
+			padding-bottom: 5px;
+			font-weight: bold;
+			font-size: 20px;
+		}
+	}
+	.prices-card:hover {
+		scale: 1.3;
+		color: $main-color;
+	}
+	.shadow-photo {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.8);
+		z-index: -20;
+	}
+}
+
+.team-position {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 50px 0;
+
+	.fa-solid {
+		display: flex;
+		align-items: center;
+		font-size: 30px;
+		padding: 0 20px;
+		cursor: pointer;
+	}
+	.team-section {
+		display: flex;
+		width: 1050px;
+		overflow-x: scroll;
+		padding: 30px;
+		.team-card {
+			box-shadow: 10px 10px 10px black;
+			margin: 0 20px;
+			border-top-left-radius: 25px;
+			border-bottom-right-radius: 25px;
+			background-color: $main-color;
+			color: $white;
+			text-align: center;
+			transition: scale 0.5s;
+
+			.team-name {
+				text-transform: uppercase;
+				font-weight: bold;
+			}
+			p {
+				padding: 10px 0;
+			}
+		}
+		.team-card:hover {
+			scale: 0.95;
+		}
+		img {
+			border-top-left-radius: 25px;
+			object-fit: cover;
+			width: 300px;
+			height: 450px;
+		}
+	}
+	.team-section::-webkit-scrollbar {
+		overflow-x: hidden;
+	}
+}
+
+.achievements {
+	position: relative;
+	padding-bottom: 50px;
+	background-image: url("/keeptrain/img/craig-lovelidge-COxd0Jbe7u8-unsplashSMALL.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	color: $white;
+	font-size: 14px;
+	z-index: 20;
+	.achievements-section {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+	}
+	.achievements-card {
+		text-align: center;
+		margin: 30px 100px;
+		width: 250px;
+		transition: all 0.5s;
+		p {
+			padding-top: 10px;
+		}
+		span {
+			font-size: 28px;
+		}
+	}
+	.achievements-card:hover {
+		scale: 1.3;
+		color: $main-color;
+	}
+	.shadow-photo {
+		position: absolute;
+		background-color: rgba(0, 0, 0, 0.8);
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -20;
+	}
+}
+
+.contact-space {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	padding-bottom: 50px;
+	.contact-section {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		.contact-name {
+			margin: 20px 70px;
+			text-transform: uppercase;
+			font-weight: bold;
+		}
+		.contact-card {
+			display: flex;
+			padding: 5px;
+			i {
+				padding-right: 10px;
+			}
+		}
+	}
+}
+
+.contact-us {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	input {
+		width: 200px;
+		margin-bottom: 20px;
+		border-radius: 8px;
+		padding: 5px;
+		border: 2px solid $page-color;
+	}
+	input:focus {
+		outline: none;
+		border: 2px solid $page-color;
+		background-color: $main-color;
+		color: $white;
+		box-shadow: 5px 5px 5px $black;
+	}
+	label {
+		font-size: 16px;
+		pointer-events: none;
+		z-index: 2;
+	}
+	.name {
+		position: absolute;
+		top: -3%;
+	}
+	.email {
+		position: absolute;
+		top: 13.5%;
+	}
+	.message {
+		position: absolute;
+		top: 29.5%;
+	}
+	textarea {
+		resize: none;
+		padding: 5px;
+		border-radius: 8px;
+		border: 2px solid $page-color;
+	}
+	textarea:focus {
+		outline: none;
+		border: 2px solid $page-color;
+		background-color: $main-color;
+		color: $white;
+		box-shadow: 5px 5px 5px $black;
+	}
+	input:focus + label {
+		visibility: hidden;
+	}
+	textarea:focus + label {
+		visibility: hidden;
+	}
+	button {
+		cursor: pointer;
+		margin: 20px 0;
+		padding: 10px;
+		width: 120px;
+		border-radius: 8px;
+		border: 2px solid $page-color;
+
+		text-transform: uppercase;
+		font-weight: bold;
+		color: $black;
+	}
+	button:focus {
+		outline: none;
+		border: 2px solid $page-color;
+		background-color: $main-color;
+		color: $white;
+		box-shadow: 5px 5px 5px $black;
+		box-shadow: 5px 5px 5px $black;
+	}
+}
+
+footer {
+	text-align: center;
+	padding: 20px;
+	background-color: $black;
+	color: $white;
+	span {
+		color: $main-color;
+	}
+	i {
+		margin-left: 3px;
+		transform: rotate(-60deg);
+	}
+}
+
+// STRONA Z CENNIKIEM @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+.prices-page {
+	height: 100vh;
+	.prices-table {
+		display: flex;
+		justify-content: center;
+		table {
+			width: 500px;
+			height: 300px;
+			text-align: center;
+			th {
+				border: 1px solid black;
+			}
+			td {
+				border: 1px solid black;
+			}
+		}
+	}
+}
+
+@media (min-width: 480px) {
+	.main-photo {
+		font-size: 25px;
+	}
+	.aboutus-card {
+		width: 50%;
+		i {
+			font-size: 24px;
+		}
+		p {
+			font-size: 18px;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.main-photo {
+		background-image: url("/keeptrain/img/gym_big.jpg");
+		font-size: 35px;
+	}
+	.aboutus-card {
+		width: 33%;
+		i {
+			font-size: 30px;
+		}
+		p {
+			font-size: 20px;
+		}
+	}
+	.achievements {
+		background-image: url("/keeptrain/img/craig-lovelidge-COxd0Jbe7u8-unsplashBIG.jpg");
+		font-size: 16px;
+	}
+}
+
+@media (min-width: 1200px) {
+	nav {
+		font-size: 22px;
+		p {
+			font-size: 35px;
+		}
+	}
+	.main-photo {
+		font-size: 35px;
+	}
+}
+
+// PRZEANALIWOAĆ CAŁY KOD I ZROBIĆ TEN HAMBURGER W JS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+// nav .nav-bars {
+// 	display: flex;
+// }
+
+// nav .open-menu {
+// 	display: none;
+// 	cursor: pointer;
+// }
+
+// nav .close-menu {
+// 	display: none;
+// }
+
+// @media (max-width: 1000px) {
+// 	nav .nav-bars {
+// 		height: 100vh;
+// 		position: fixed;
+// 		top: 0;
+// 		right: 0;
+// 		left: 0;
+// 		z-index: 10;
+// 		flex-direction: column;
+// 		justify-content: center;
+// 		display: none;
+// 	}
+// 	nav .nav-bars .close-menu {
+// 		display: block;
+// 		position: absolute;
+// 		top: 20px;
+// 		left: 20px;
+// 	}
+// 	nav .open-menu {
+// 		display: inline-block;
+// 		position: absolute;
+// 		top: 40px;
+// 		right: 40px;
+// 	}
+// 	nav .nav-link {
+// 		display: none;
+// 	}
+// }
